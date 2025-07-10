@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: 'psql1234',
       database: 'todo',
       autoLoadEntities: true,
-      synchronize: false,
+      synchronize: true,
     }),
   ],
 })
