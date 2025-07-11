@@ -24,7 +24,7 @@ export class TasksService {
   }
 
   async getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
-    const { status, search, sortBy = 'createdAt', order = 'DESC' } = filterDto;
+    const { status, search, sortBy = 'updatedAt', order = 'DESC' } = filterDto;
 
     const query = this.tasksRepository.createQueryBuilder('task');
 
