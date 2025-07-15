@@ -14,6 +14,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'todo',
       autoLoadEntities: true,
       synchronize: true,
+
+      extra: { max: 5 },
     }),
   ],
 })

@@ -42,6 +42,9 @@ export class TasksService {
     query.orderBy(`task.${sortBy}`, order);
 
     const tasks = await query.getMany();
+    if (tasks.length === 0) {
+      throw new NotFoundException(`Task not found`);
+    }
     return tasks;
   }
 
